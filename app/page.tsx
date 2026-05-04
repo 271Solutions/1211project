@@ -10,7 +10,6 @@ export default function Home() {
 
   function handleSubmit(e: any) {
     e.preventDefault();
-
     if (!before || !moment || !after) return;
 
     setTestimonies([
@@ -23,9 +22,9 @@ export default function Home() {
     setAfter("");
   }
 
-  function addWitness(index: number) {
+  function addWitness(i: number) {
     const updated = [...testimonies];
-    updated[index].witness += 1;
+    updated[i].witness += 1;
     setTestimonies(updated);
   }
 
@@ -70,7 +69,5 @@ export default function Home() {
         </div>
       ))}
     </main>
-  );
-}
   );
 }
